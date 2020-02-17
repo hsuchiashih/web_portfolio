@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio_rgb</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+  <header>
+
+    <div class="nav-bar">
+      <div class="nav-container">
+        <div class="menu-icon">
+          <a href="#javascript:void(0)">
+            <i class="fas fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html#header">About</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="https://reurl.cc/vnV2Re">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- <nav>
+      <div class="nav-bar">
+        <div class="resume-btn"><a href="">[ Resume ]</a></div>
+        <div class="logo"><a href="">logo</a></div>
+        <div class="contact-btn"><a href="">[ Contact ]</a></div>
+      </div>
+    </nav> -->
+
+  </header>
+  <div class=" btn-area">
+    <div class="next-btn">
+      <div>
+        <a class="Fugaz-One-font" href="portfolio_game.html">prev</a>
+      </div>
+    </div>
+    <div class="next-btn">
+      <div>
+        <a class="Fugaz-One-font" href="index.html">next</a>
+      </div>
+    </div>
+  </div>
+  <section class="portfolio">
+    <div class="wow fadeInUp 2s portfolio-area-one ">
+      <img src="images/portfolio/06_rgbtohex/rgb.png" alt="">
+    </div>
+    <div class="portfolio-area-desc">
+      <div class=" wow fadeInLeft portfolio-title Fugaz-One-font">
+        <h2 class="Fugaz-One-font">RGBto</h2>
+        <h2 classs="Fugaz-One-font">HEX</h2>
+      </div>
+      <div class="wow fadeInRight when">
+        <h3 class="Fugaz-One-font">when</h3>
+        <h3 class="Fugaz-One-font">-2019-</h3>
+      </div>
+      <div class="wow wow fadeInLeft what">
+        <h3 class="Fugaz-One-font">what</h3>
+        <p>練習資料轉換</p>
+        <p>讓使用者利用拖曳的方式</p>
+        <p>取得RGB轉Hex的色碼</p>
+      </div>
+      <div class="wow fadeInRight skills">
+        <h3 class="Fugaz-One-font">skills</h3>
+        <p>HTML、CSS</p>
+        <p>Javascript</p>
+      </div>
+    </div>
+    <div class=" wow fadeIn portfolio-area-two">
+      <video src="video/06_rgbtohex/rgb_video_01.mp4" poster="" autoplay="" loop="" muted="" playsinline=""></video>
+    </div>
+
+    </div>
+    <!-- <div class="wow fadeIn portfolio-area-one">
+      <img src="images/portfolio/03_friendlist/friendlist_big_01.jpg" alt="">
+    </div> -->
+
+    <!-- <div class="wow fadeIn portfolio-area-one">
+      <img src="images/portfolio/01_rt/rt_big_02.jpg" alt="">
+    </div> -->
+  </section>
+
+  <div class="close-btn-area">
+    <div class="close-btn">
+      <div>
+        <a class="Fugaz-One-font" href="index.html">close</a>
+      </div>
+    </div>
+  </div>
+
+  <a id="page-top" href="javascript:void(0)"><i class="fas fa-chevron-circle-up fa"></i>
+    <br>
+    <p class="Fugaz-One-font">Top</p>
+  </a>
+
+  <footer class="footer-area">
+    <div class="footer">
+      <!-- <div class="top-btn"><img src="images/btn/btn-03.png" alt=""></div> -->
+      <div class="copyright">
+        <div>
+          <a href="mailto:hsuchiashih@gmail.com"> hsuchiashih@gmail.com</a>
+        </div>
+        <br>
+        <p>© 2020 | hsuchiashih.com</p>
+
+
+      </div>
+      <!-- <div class="link-icon">
+                              <div class="email-icon"><img src="images/link-icon/link-icon-01.png" alt=""></div>
+                              <div class="git-icon"><img src="images/link-icon/link-icon-02.png" alt=""></div>
+                              <div class="medium-icon">
+                                  <img src="images/link-icon/link-icon-03.png" alt="">
+                              </div>
+                      </div> -->
+    </div>
+  </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/WOW-master/dist/wow.min.js"></script>
+<script>
+
+  new WOW().init();
+
+  $(".menu-icon").click(function () {
+    $(".nav-container>nav").slideToggle()
+  });//.menu-icon click end
+
+  $(".nav-container>nav>ul").mouseleave(function () {
+    // let $id = $(this).find("a").attr("href");
+    // $("html,body").animate({scrollTop : $(id).offest().top-40 });
+    if ($(window).outerWidth() < 992) {
+      $("nav").slideUp();
+    } else {
+      $("nav").show();
+    };
+  });//.container>nav>ul mouseleave end
+
+
+  $(window).resize(function () {
+    // console.log($(window).outerWidth())
+
+    if ($(window).outerWidth() >= 992) {
+      $(".nav-container>nav").show();
+    } else {
+      $(".nav-container>nav").hide();
+    };
+
+  }); // window resize end
+
+  $(window).scroll(function () {
+    // console.log("test")
+    // console.log("scrolltop: "+ $(window).scrollTop());
+    if ($(window).scrollTop() > 39) {
+      $("#page-top").show();
+    } else {
+      $("#page-top").hide();
+    };
+  }); // window scroll end
+
+  $("#page-top").click(function () {
+    console.log("test")
+    $("html,body").animate({ scrollTop: 0 })
+  });// page-top click end
+
+
+  $("nav>ul>li").click(function () {
+    console.log($(this).find("a").attr("href"));
+    let location = $(this).find("a").attr("href");
+    $("html,body").animate({
+      scrollTop: $(location).offset().top - 39
+    });
+  });// nav>ul>li click end
+
+</script>
+
+</html>

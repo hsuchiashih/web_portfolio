@@ -520,12 +520,16 @@
   margin: auto;
   margin-top: 2%;
   margin-bottom: 4%;
+  
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: center;
 }
 
-.close-btn>div{
-    width:90px;
-    margin: auto;
-     
+.close-btn>div{ 
+    padding: 10%;
+    width:120px;
+    margin: auto;  
  }
 
  .close-btn>div>a{
@@ -536,12 +540,34 @@
     height: 48px;
     /* padding-top: 0px; */
     line-height: 48px;
-    border-radius: 30px 30px;
+    border-radius: 35px 35px;
     background-color: #E5c1c5;
     color: aliceblue;   
  }
- 
 
+ .goto-btn {
+   max-width: 1140px;
+   width: 100%;
+   margin: auto;
+   text-align: center;
+   margin-bottom: 2%;
+ }
+
+ .goto-btn>i{
+   color:aliceblue ;
+   
+ }
+
+ .goto-btn a{
+   text-decoration: none;
+   color: aliceblue ;; 
+ }
+ 
+ .goto-btn a:hover{
+  color:  #E5c1c5;
+ }
+
+ 
  @media screen and (min-width: 568px) {
   .close-btn>div{
     width: 120px;

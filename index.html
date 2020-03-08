@@ -282,7 +282,7 @@
                     <a href="mailto:hsuchiashih@gmail.com"> hsuchiashih@gmail.com</a>
                 </div>
                 <br>
-                <p>© 2020 | hsuchiashih.com</p>
+                <p>© 2020 | hsuchiashih. All Rights Reserved.</p>
 
 
             </div>
@@ -307,22 +307,22 @@
             dotColor: '#f7f7f7',
             lineColor: '#f7f7f7'
         });
-
-
-
+        
         function openNav() {
             document.getElementById("myNav").style.width = "100%";
         }
-
         function closeNav() {
             document.getElementById("myNav").style.width = "0%";
         }
 
 
 
-
         $(".menu-icon").click(function () {
-            $(".nav-container>nav").slideToggle()
+            $(".nav-container>nav").slideToggle();            
+        });//.menu-icon click end
+
+        $(".nav-container>nav").click(function () { 
+            $(this).slideToggle();        
         });//.menu-icon click end
 
         $(".nav-container>nav>ul").mouseleave(function () {
@@ -374,16 +374,15 @@
 
 
         var oTop = $(".nav-container").offset().top;
-        var martop = $(".nav-container").outerHeight();
+        // var martop = $(".nav-container").outerHeight();
         var sTop = 0;
         $(window).scroll(function () {
             sTop = $(this).scrollTop();
             if (sTop >= oTop) {
-                $(".nav-container").css({ "position": "fixed", "top": "0", "width": "100%", "z-index": "999" });
-                $(".intro").css({ "margin-top": martop })
+                $(".nav-container").css({ "position": "fixed", "top": "0", "width": "100%", "z-index": "999" }).fadeIn();
+                // $(".intro").css({ "margin-top": martop - 20 })
             } else {
-                $(".nav-container").css({ "position": "static" });
-                $(".intro").css({ "margin-top": "0" })
+                $(".nav-container").hide();
             }
         });
     </script>
